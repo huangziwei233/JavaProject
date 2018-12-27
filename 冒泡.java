@@ -1,0 +1,45 @@
+package text;
+
+import java.util.Scanner;
+public class 冒泡
+{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+      Scanner input = new Scanner(System.in);//实例控制台输入类
+      int num=0;
+      System.out.println("请输入想要排序的数字个数:");
+      num=input.nextInt();
+       int []a = new int[num];
+       
+       System.out.println("请输入数字:");
+       for(int i=0;i<a.length;i++){
+           a[i] = input.nextInt();
+        }
+      
+       System.out.println("排序之前:");
+        for (int i : a) {
+             System.out.print(i+"\t");
+       }
+         
+       //冒泡排序实现
+       for(int i=0;i<a.length-1;i++){
+           for(int j=0;j<a.length-i-1;j++){
+                if(a[j]>a[j+1]){
+                  int temp = a[j];
+                   a[j] = a[j+1];
+                   a[j+1] = temp;
+                }
+          }
+       }
+              
+       System.out.println("\n排序之后:");
+        for (int i : a) {
+             System.out.print(i+"\t");
+         }
+        
+    }
+}
+
+
